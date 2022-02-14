@@ -84,5 +84,17 @@ public class GameManager : MonoBehaviour // singleton class, any other class can
             render7.enabled = true;
             render8.enabled = true;
         }
+
+        else
+        {
+            render1.enabled = false;
+            render2.enabled = false;
+            render3.enabled = false;
+            render4.enabled = false;
+            render5.enabled = false;
+            render6.enabled = false;
+            render7.enabled = false;
+            render8.enabled = false;
+        }
     }
 }
