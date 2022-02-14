@@ -17,7 +17,7 @@ public class PlayerTrigger : MonoBehaviour
             Renderer render = GetComponent<Renderer>();
             render.material.color = Color.green;
 
-            GameManager.Instance.OnArchEntered(this.gameObject);
+            //GameManager.Instance.OnArchEntered(this.gameObject);
         }
     }
 
