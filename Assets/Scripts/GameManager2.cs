@@ -15,7 +15,7 @@ public class GameManager2 : MonoBehaviour // singleton class, any other class ca
     void Start()
     {
         //render1 = part1.GetComponent<MeshRenderer>();
-        Weapon = new List<GameObject>();
+        //Weapon = new List<GameObject>();
     }
 
     public static GameManager2 Instance // set as instance so all other objects in game world can access it
@@ -51,8 +51,9 @@ public class GameManager2 : MonoBehaviour // singleton class, any other class ca
 
     void Update()
     {
-        if (NumberOfPoints == 1)
+        if (NumberOfPoints == 4)
         {
+            Debug.Log("Achieved.");
             for (int i = 0; i < Weapon.Count; i++)
             {
                 var render = Weapon[i].GetComponent<MeshRenderer>();
@@ -67,7 +68,7 @@ public class GameManager2 : MonoBehaviour // singleton class, any other class ca
             {
                 var render = Weapon[i].GetComponent<MeshRenderer>();
                 render.enabled = false;
-                Debug.Log("Disabling Weapon Renderer");
+                //Debug.Log("Disabling Weapon Renderer");
             }
         }
     }
