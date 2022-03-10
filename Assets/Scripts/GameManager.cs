@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour // singleton class, any other class can
     //private float CurrentArchIndex = 0;
     public float NumberOfPoints = 0;
     public List <GameObject> Weapon;
+    public MeshRenderer grab;
 
 
     void Start()
@@ -56,9 +57,11 @@ public class GameManager : MonoBehaviour // singleton class, any other class can
             Debug.Log("Achieved.");
             for (int i = 0; i < Weapon.Count; i++)
             {
-                var render = Weapon[i].GetComponent<MeshRenderer>();
-                render.enabled = true;
-                Debug.Log("Enabling Weapon Renderer");
+                Debug.Log(Weapon.Count);
+                grab = Weapon[i].GetComponent<MeshRenderer>();
+                grab.enabled = true;
+                //Debug.Log(grab.enabled);
+                //Debug.Log("Enabling Weapon Renderer");
             }
         }
 
@@ -66,8 +69,8 @@ public class GameManager : MonoBehaviour // singleton class, any other class can
         {
             for (int i = 0; i < Weapon.Count; i ++)
             {
-                var render = Weapon[i].GetComponent<MeshRenderer>();
-                render.enabled = false;
+                grab = Weapon[i].GetComponent<MeshRenderer>();
+                grab.enabled = false;
                 //Debug.Log("Disabling Weapon Renderer");
             }
         }
